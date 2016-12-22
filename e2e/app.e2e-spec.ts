@@ -1,6 +1,6 @@
 import { QueendocAuthorizationPage } from './app.po';
 
-describe('queendoc-authorization App', function() {
+describe('queendoc.authorization App', function() {
   let page: QueendocAuthorizationPage;
 
   beforeEach(() => {
