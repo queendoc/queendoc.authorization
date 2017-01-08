@@ -1,0 +1,17 @@
+.qa-background{background-color: #F5F5F5;}
+
+.qa-accordion-menu {
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.qa-accordion-menu .panel-heading a {
+    font-size: small;
+    font-weight: bold;
+}
+.qa-accordion-menu .panel-collapse a {
+    font-size: small;
+}
+.qa-accordion-menu .panel-collapse ul {
+    list-style-type: none;
+    padding-left:25px;
+}
