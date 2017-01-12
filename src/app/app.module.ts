@@ -6,14 +6,14 @@ import {HttpModule} from '@angular/http';
 import {AppComponent} from './app.component';
 import {LoginComponent} from "./components/login-umut/login.component";
 import {TopbarComponent} from "./components/topbar/topbar.component";
-import {LeftMenuComponent} from "./components/leftmenu/leftmenu.component";
+import {DocrealmComponent} from "./components/docrealm/docrealm.component";
 
 @NgModule({
     declarations: [
         AppComponent,
         LoginComponent,
         TopbarComponent,
-        LeftMenuComponent/** new components should be added **/
+        DocrealmComponent/** new components should be added **/
 
     ],
     imports: [
@@ -22,7 +22,7 @@ import {LeftMenuComponent} from "./components/leftmenu/leftmenu.component";
         HttpModule
     ],
     providers: [],
-    bootstrap: [TopbarComponent,LeftMenuComponent] /** to start login screen, it has been changed from AppComponent to LoginComponent **/
+    bootstrap: [TopbarComponent,DocrealmComponent] /** to start login screen, it has been changed from AppComponent to LoginComponent **/
 })
 export class AppModule {
 }
