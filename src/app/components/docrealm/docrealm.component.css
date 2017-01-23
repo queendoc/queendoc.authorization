@@ -15,3 +15,14 @@
     list-style-type: none;
     padding-left:25px;
 }
+
+
+
+.scrollable-div {
+    border: solid lightgrey 1px;
+    overflow: scroll;
+    height: 252px;
+}
+.scrollable-div table {
+    font-size: small;
+}
