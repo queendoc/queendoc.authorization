@@ -1,6 +1,13 @@
-<div style="background-color:#fffbfb;">
-    <div class="container">
-        <h4>MUH.ASD Analiz Süreci Dokümanı</h4>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#tab1">ENG.SRA.PR</a></li>
+    <li>
+        <a data-toggle="tab" href="#addtab"><span class="glyphicon glyphicon-plus"></span></a>
+    </li>
+</ul>
+<br/>
+<div class="tab-content">
+    <div id="tab1" class="tab-pane fade in active">
+        <h4>ENG.SRA.PR (Software Requrment Analysis Process)</h4>
         <div class="row">
             <div class="col-sm-2">
                 <img src="/app/assets/images/docrealm/eng-rap.jpg" />
@@ -13,6 +20,7 @@
                         <th>Updated</th>
                         <th>Version</th>
                         <th>Defauls</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -21,12 +29,16 @@
                         <td>Navid Bamdadrooshan</td>
                         <td>2.1</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     <tr>
                         <td>01.10.2016</td>
                         <td>Umut Taherzadeh</td>
                         <td>2.0</td>
-                        <td>X</td>
+                        <td>
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
 
                     <tr>
@@ -34,40 +46,84 @@
                         <td>Navid Bamdadrooshan</td>
                         <td>1.5</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     <tr>
                         <td>02.01.2017</td>
                         <td>Navid Bamdadrooshan</td>
                         <td>1.4</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     <tr>
                         <td>02.01.2017</td>
                         <td>Navid Bamdadrooshan</td>
                         <td>1.3</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     <tr>
                         <td>02.01.2017</td>
                         <td>Navid Bamdadrooshan</td>
                         <td>1.2</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     <tr>
                         <td>02.01.2017</td>
                         <td>Navid Bamdadrooshan</td>
                         <td>1.1</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     <tr>
                         <td>02.01.2017</td>
                         <td>Navid Bamdadrooshan</td>
                         <td>1.0</td>
                         <td></td>
+                        <td><a href="#">Edit</a></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+    </div>
+    <div id="addtab" class="tab-pane fade">
+        <p>write javascript to add new tab</p>
+    </div>
+</div>
+<br/>
+<ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#content">Content</a></li>
+    <li><a data-toggle="pill" href="#codification">Codification</a></li>
+    <li><a data-toggle="pill" href="#headerfooter">Header/Footer</a></li>
+    <li><a data-toggle="pill" href="#cover">Cover</a></li>
+    <li><a data-toggle="pill" href="#revision">Revision</a></li>
+    <li><a data-toggle="pill" href="#toc">Table of Content</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="content" class="tab-pane fade in active"  style="background-color: lightgray">
+        <div class="qd-page" size="A4">
+            <h3>IntroductionX</h3>
+        </div>
+        <div class="qd-page" size="A4">
+            <h3>Second Page</h3>
+        </div>
+    </div>
+    <div id="codification" class="tab-pane fade">
+        <p>Document name, code etc. are defined here</p>
+    </div>
+    <div id="headerfooter" class="tab-pane fade">
+        <p>Header and Footer are defined here</p>
+    </div>
+    <div id="cover" class="tab-pane fade">
+        <p>Document Cover Page is defined here</p>
+    </div>
+    <div id="revision" class="tab-pane fade">
+        <p>Document revisions are defined here</p>
+    </div>
+    <div id="toc" class="tab-pane fade">
+        Table of Content
     </div>
 </div>
