@@ -14,6 +14,7 @@ import {QDocPageComponent} from "./components/document/page/qd-page.component";
 import {QDocStatementComponent} from "./components/document/statement/qd-statment.component";
 import {QDocEditorComponent} from "./components/document/editor/qd-editor.component";
 import {LoginService} from "./components/login/login.service";
+import {UserComponent} from "./components/account/user/user.component";
 
 const router : Routes = [
     {
@@ -27,6 +28,10 @@ const router : Routes = [
     {
         path : 'surec',
         component : AnalizSurecComponent
+    },
+    {
+        path : 'user',
+        component : UserComponent
     }
 ];
 
@@ -42,6 +47,8 @@ const router : Routes = [
         QDocPageComponent,
         QDocStatementComponent,
         QDocEditorComponent
+        AnalizSurecComponent,
+        UserComponent
     ],
     imports: [
         BrowserModule,
