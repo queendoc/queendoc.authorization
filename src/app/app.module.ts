@@ -10,6 +10,7 @@ import {MainComponent} from "./components/index/main/main.component";
 import {NavbarComponent} from "./components/index/navbar/navbar.component";
 import {MenuComponent} from "./components/index/menu/menu.component";
 import {AnalizSurecComponent} from "./components/docrealm/analiz-surec-dokumani/analiz.surec.component";
+import {UserComponent} from "./components/account/user/user.component";
 
 const router : Routes = [
     {
@@ -23,6 +24,10 @@ const router : Routes = [
     {
         path : 'surec',
         component : AnalizSurecComponent
+    },
+    {
+        path : 'user',
+        component : UserComponent
     }
 ];
 
@@ -34,7 +39,8 @@ const router : Routes = [
         NavbarComponent,
         MenuComponent,
         LoginComponent,
-        AnalizSurecComponent
+        AnalizSurecComponent,
+        UserComponent
     ],
     imports: [
         BrowserModule,
