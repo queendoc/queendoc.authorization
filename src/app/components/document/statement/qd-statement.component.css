@@ -2,7 +2,7 @@
     border: dotted;
     border-color: lightgrey;
     position: relative;
-    z-index: 1;
+
 }
 .qd-statement-toolbar {
     background-color: rgba(15, 107, 255, 0.4);
