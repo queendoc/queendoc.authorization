@@ -10,6 +10,9 @@ import {MainComponent} from "./components/index/main/main.component";
 import {NavbarComponent} from "./components/index/navbar/navbar.component";
 import {MenuComponent} from "./components/index/menu/menu.component";
 import {AnalizSurecComponent} from "./components/docrealm/analiz-surec-dokumani/analiz.surec.component";
+import {QDocPageComponent} from "./components/document/page/qd-page.component";
+import {QDocStatementComponent} from "./components/document/statement/qd-statment.component";
+import {QDocEditorComponent} from "./components/document/editor/qd-editor.component";
 import {LoginService} from "./components/login/login.service";
 
 const router : Routes = [
@@ -35,7 +38,10 @@ const router : Routes = [
         NavbarComponent,
         MenuComponent,
         LoginComponent,
-        AnalizSurecComponent
+        AnalizSurecComponent,
+        QDocPageComponent,
+        QDocStatementComponent,
+        QDocEditorComponent
     ],
     imports: [
         BrowserModule,

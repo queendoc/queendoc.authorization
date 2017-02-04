@@ -1,0 +1,14 @@
+.qd-statement{
+    border: dotted;
+    border-color: lightgrey;
+    position: relative;
+    z-index: 1;
+}
+.qd-statement-toolbar {
+    background-color: rgba(15, 107, 255, 0.4);
+    position: absolute;
+    z-index: 100;
+    top: 0.2cm;
+    left: 13cm;
+}
+
