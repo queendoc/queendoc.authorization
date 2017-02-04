@@ -10,6 +10,7 @@ import {MainComponent} from "./components/index/main/main.component";
 import {NavbarComponent} from "./components/index/navbar/navbar.component";
 import {MenuComponent} from "./components/index/menu/menu.component";
 import {AnalizSurecComponent} from "./components/docrealm/analiz-surec-dokumani/analiz.surec.component";
+import {LoginService} from "./components/login/login.service";
 
 const router : Routes = [
     {
@@ -42,7 +43,7 @@ const router : Routes = [
         HttpModule,
         RouterModule.forRoot(router)
     ],
-    providers: [],
+    providers: [LoginService],
     bootstrap: [MainComponent] /** to start login screen, it has been changed from AppComponent to LoginComponent **/
 })
 export class AppModule {

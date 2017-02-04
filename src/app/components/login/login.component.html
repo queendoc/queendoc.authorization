@@ -5,6 +5,10 @@
                 <img src="../../app/assets/images/queendoc.gif" alt="Queen Doc" class="queendoc">
             </div>
             <div class="login-credentials-container">
+
+                <button (click)="loginFunc();">login</button>
+                <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+
                 <div class="login-credentials">
                     <form action="">
                         <div class="row">
