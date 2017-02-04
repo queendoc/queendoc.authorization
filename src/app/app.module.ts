@@ -12,6 +12,7 @@ import {MenuComponent} from "./components/index/menu/menu.component";
 import {AnalizSurecComponent} from "./components/docrealm/analiz-surec-dokumani/analiz.surec.component";
 import {QDocPageComponent} from "./components/document/page/qd-page.component";
 import {QDocStatementComponent} from "./components/document/statement/qd-statment.component";
+import {QDocEditorComponent} from "./components/document/editor/qd-editor.component";
 
 const router : Routes = [
     {
@@ -38,7 +39,8 @@ const router : Routes = [
         LoginComponent,
         AnalizSurecComponent,
         QDocPageComponent,
-        QDocStatementComponent
+        QDocStatementComponent,
+        QDocEditorComponent
     ],
     imports: [
         BrowserModule,

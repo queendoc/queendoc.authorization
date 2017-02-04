@@ -11,6 +11,7 @@ import {Component} from '@angular/core';
     styleUrls: ['./qd-page.component.css']
 })
 export class QDocPageComponent {
-    constructor() { }
+    constructor() {
+    }
     title = 'Queendoc Page';
 }
