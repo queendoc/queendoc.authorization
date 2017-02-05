@@ -11,6 +11,21 @@ var methodOverride = require('method-override');
 
 // configuration ===========================================
 
+
+/** ----------------------------- services ----------------------------- **/
+
+/** -------------> TO access backend services, you need to add your service file into services object <------------- **/
+var services = {};
+// TODO make it dynamic load
+services["LoginService"] = require("./services/login/login.service");
+services["ProjectRealmService"] = require("./services/project/project-realm/project.realm.service");
+services["ProjectDetailService"] = require("./services/project/project-details/project.details.service");
+
+/** ----------------------------- end of services ----------------------------- **/
+
+
+
+
 // config files
 // var db = require('./config/db');
 
@@ -57,8 +72,8 @@ app.use(function (req, res, next) {
     // // Request methods you wish to allow
     // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
     //
-    // // Request headers you wish to allow
-    // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     //
     // // Set to true if you need the website to include cookies in the requests sent
     // // to the API (e.g. in case you use sessions)
@@ -68,20 +83,32 @@ app.use(function (req, res, next) {
     next();
 });
 
+///dispatch/login
+app.post('/dispatch', function(req, res) {
 
-app.get('/dispatch/login', function(req, res) {
+    // TODO error handling
+    // TODO define return object definition
     console.log("its in");
-    // use mongoose to get all nerds in the database
-    // Nerd.find(function (err, nerds) {
-    //
-    //     // if there is an error retrieving, send the error.
-    //     // nothing after res.send(err) will execute
-    //     if (err)
-    //         res.send(err);
-    //
-    //     res.json(nerds); // return all nerds in JSON format
-    // });
-    res.json({a : "a"});
+
+    console.log(req.body.service);
+    console.log(req.body.parameters);
+    console.log(req.body.serviceTime);
+
+    if(!req.body.service) {
+        console.error("service definition required");
+        throw "service definition required";
+    }
+    var servicePrefix = req.body.service.split("_")[0];
+    var serviceMethod = req.body.service.split("_")[1];
+
+    if(!services[servicePrefix] || !services[servicePrefix][serviceMethod]) {
+        console.error("service definition not found");
+        throw "service definition not found";
+    }
+
+    var response = services[servicePrefix][serviceMethod](req.body.parameters);
+    res.json({"data" : response});
+
 });
 
 // expose app
