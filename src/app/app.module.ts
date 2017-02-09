@@ -46,7 +46,7 @@ const router : Routes = [
         AnalizSurecComponent,
         QDocPageComponent,
         QDocStatementComponent,
-        QDocEditorComponent
+        QDocEditorComponent,
         AnalizSurecComponent,
         UserComponent
     ],

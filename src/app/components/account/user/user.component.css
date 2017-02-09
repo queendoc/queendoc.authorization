@@ -1,0 +1,48 @@
+.user-container {
+    font: 13px Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 50%;
+    border: solid 3px #3398cc;
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+.queendoc-logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+.user-credentials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 3;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+form > .row > label {
+    color: #3398cc;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+form > .row > input {
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    flex-grow: 3;
+}
+.btn-submit {
+    background-color: #3398cc;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    width: 35%;
+    margin-top: 15px;
+}
