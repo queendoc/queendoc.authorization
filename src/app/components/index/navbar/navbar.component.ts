@@ -3,6 +3,7 @@
  */
 
 import {Component} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-navbar',
@@ -10,6 +11,33 @@ import {Component} from '@angular/core';
     styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-    constructor() { }
-    title = 'Queendoc Top Bar';
+
+    private navigationOptions : Array<Object>;
+    private selectedNavigation : string;
+    private param;
+
+    constructor(private router : Router) {
+
+        this.navigationOptions = [
+            {"text" : "Document Realm", "value" : ""},
+            {"text" : "Projects Realm", "value" : "/project-realm"},
+            {"text" : "Document Desktop", "value" : ""},
+            {"text" : "Access wizard", "value" : ""},
+            {"text" : "Stakeholders", "value" : ""},
+            {"text" : "Visual Artistics / Cosmetic Preferences", "value" : ""},
+            {"text" : "Setting", "value" : ""}
+        ];
+
+        this.selectedNavigation = this.navigationOptions[0]["value"];
+    }
+
+    loader() {
+        // TODO null check
+        var nav = [];
+        nav[0] = '/' + this.selectedNavigation;
+        if(this.param) {
+            nav[1] = this.param;
+        }
+        this.router.navigate(nav);
+    }
 }

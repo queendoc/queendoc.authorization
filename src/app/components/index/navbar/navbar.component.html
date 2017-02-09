@@ -17,14 +17,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="qd-topbar">
             <form class="navbar-form navbar-left">
-                <select class="form-control" id="moduleSelector">
-                    <option selected>Document Realm</option>
-                    <option >Projects Realm</option>
-                    <option >Docment Desktop</option>
-                    <option>Access wizard</option>
-                    <option>Stakeholders</option>
-                    <option>Visual Artistics / Cosmetic Preferences</option>
-                    <option>Settings</option>
+
+                <select [(ngModel)]="selectedNavigation" name = "selectedNavigation" (ngModelChange)="loader()" class="form-control" id="moduleSelector">
+                    <option *ngFor="let opt of navigationOptions" [ngValue]="opt.value"> {{opt.text}} </option>
                 </select>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
