@@ -69,7 +69,7 @@ const router: Routes = [
         QDocStatementComponent,
         QDocEditorComponent,
         AnalizSurecComponent,
-        UserComponent
+        UserComponent,
         QDocEditorComponent,
 
         ProjectComponent,
